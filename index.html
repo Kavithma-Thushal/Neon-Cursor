@@ -21,6 +21,24 @@
             text-shadow: 0 0 5px #ffffff, 0 0 20px #000, 0 0 30px #000;
         }
 
+        #app h1 {
+            --fontSize: 60px;
+            --lineHeight: 80px;
+            width: auto;
+            height: calc(2 * var(--lineHeight));
+            line-height: var(--lineHeight);
+            margin: calc(50vh - var(--lineHeight)) auto 0;
+            font-size: var(--fontSize);
+            text-transform: uppercase;
+        }
+
+        #app a {
+            margin-top: 10px;
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+        }
+
         #app canvas {
             display: block;
             position: fixed;
@@ -31,7 +49,12 @@
 </head>
 
 <body>
-<div id="app"></div>
+<div id="app">
+    <div id="hero">
+        <h1>NEON<br/>CURSOR</h1>
+        <a target="_blank" href="https://github.com/klevron/threejs-toys">github/threejs-toys</a>
+    </div>
+</div>
 
 <script type="module">
     import {neonCursor} from 'https://unpkg.com/threejs-toys@0.0.8/build/threejs-toys.module.cdn.min.js'
